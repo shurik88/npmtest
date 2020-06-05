@@ -34,7 +34,7 @@ jobs:
     - name: Setup old .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '2.1'
+        dotnet-version: '2.1.806'
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -45,7 +45,7 @@ jobs:
       run: dotnet restore
     - name: .net core combine two versions
       run: |
-        rsync -a ${DOTNET_ROOT/3.1.200/2.1}/* $DOTNET_ROOT/
+        rsync -a ${DOTNET_ROOT/3.1.200/2.1.806}/* $DOTNET_ROOT/
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Npm Install
