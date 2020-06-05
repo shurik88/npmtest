@@ -85,4 +85,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="Frontend\App\DTO\userLoginData.d.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
