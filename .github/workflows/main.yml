@@ -34,15 +34,18 @@ jobs:
     - name: Setup old .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '2.0.x'
+        dotnet-version: '2.0.9'
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.x'
+        dotnet-version: '3.1.200'
     - name: Set GithubPackages Source
       run: dotnet nuget add source "https://nuget.pkg.github.com/shurik88/index.json" --name "GPR" --username shurik88 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
     - name: Install dependencies
       run: dotnet restore
+    - name: .net core combine two versions
+      run: |
+        rsync -a ${DOTNET_ROOT/3.1.200/2.0.9}/* $DOTNET_ROOT/
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Npm Install
