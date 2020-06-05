@@ -1,0 +1,381 @@
+﻿/**Шрифты*/
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/OpenSans-Regular.eot);
+    src: local("Open Sans"), local("OpenSans"), url(/fonts/OpenSans-Regular.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-Regular.eot) format("eot"), url(/fonts/OpenSans-Regular.woff2) format("woff2"), url(/fonts/OpenSans-Regular.woff) format("woff"), url(/fonts/OpenSans-Regular.ttf) format("truetype"), url(/fonts/OpenSans-Regular.svg) format("svg")
+}
+
+body {
+    font-family: "Open Sans", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* Стили панелей */
+
+.panel-heading_with-filter {
+    height: 46px;
+    line-height: 26px;
+}
+
+.panel-heading-filter {
+    float: right;
+    position: relative;
+    top: -3px;
+    width: auto;
+}
+
+
+/*Общий класс - строка для перехода*/
+.clickable-row {
+    cursor: pointer;
+}
+
+.admin-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.top-margin20 {
+    margin-top: 20px;
+}
+
+/**Переписанный стиль NProgress для того чтобы bar не заваливался за overlay*/
+#nprogress .bar {
+    z-index: 100002;
+}
+.actionButtons-block {
+    margin-bottom: 15px;
+}
+
+.clickable-row { cursor: pointer; }
+
+/**Глобальный overlay для действий сохранения и тех действий где надо блокировать пользователя*/
+#globalOverlay {
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+}
+
+#globalProgressBar {
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+}
+
+#globalProgressBar > div {
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+}
+
+#globalProgressBar > div > div {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: solid 1px #000;
+}
+
+#globalProgressBar .text {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.photo-holder {
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+
+.no-photo {
+    font-size: 100px;
+    position: absolute;
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+}
+
+.photo-holder-menu {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    display: none;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+}
+
+.photo-holder-editable:hover .photo-holder-menu {
+    display: block;
+}
+
+.photo-holder-menu > li {
+    display: block;
+}
+
+.photo-holder-menu > li > a {
+    color: #fff;
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+}
+
+
+
+.title-add-link {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 2px;
+    position: relative;
+    text-decoration: none;
+    top: 2px;
+}
+
+.table-hover tr:hover {
+    cursor: pointer;
+}
+
+.loading-overlay-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 60px;
+}
+
+.loading-overlay-container-inline {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-inline {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('default.gif');
+}
+
+.loading-overlay {
+    background: rgba(255, 255, 255, 0.5) url('default.gif') no-repeat 50% 50%;
+    bottom: 0;
+    left: 0;
+    min-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.link-button {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/**Делаем иконку в дереве белой*/
+
+.list-group .active .fa {
+    color: #fff;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.table tr.active {
+    font-weight: bold;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.long-text-in-table {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.well-block {
+    position: relative;
+    border-radius: 3px;
+    background: #f2f2f2;
+    border-left: 3px solid #999999;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.rtp-processPercentDiv {
+    width: 52px;
+    height: 14px;
+    background: #fff;
+    border: 1px solid silver;
+}
+
+.rtp-processValueDiv {
+    background: #0a96be;
+    width: 31px;
+    height: 13px;
+}
+
+.popover {
+    z-index: 9999;
+    position: fixed;
+    width: 350px;
+    max-width: 350px;
+}
+
+.btn-fixed-width {
+    width: 80px;
+}
+
+/*Баг: почему-то чекбокс в лейбле всегда визуально смещён чуть выше
+    Исправляем данную ситуацию
+*/
+.shifted-checkbox {
+    position: relative;
+    top: 2px;
+}
+
+
+.input-number-inline {
+    display: inline-block;
+    margin-left: 20px;
+    width: 80px;
+}
+
+.block-label {
+    display: block;
+    margin: 5px 0;
+}
+
+.flex-filler {
+    flex-grow: 1;
+}
+
+.link-button-with-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.link-button-with-text-container:hover {
+    text-decoration: none;
+}
+
+.custom-ghost {
+    border: 1px dashed #777;
+    opacity: .3;
+    background: #fff;
+}
+
+.ocr-icon {
+    font-family: 'Tahoma';
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    padding-right: 8px;
+}
+
+.drag-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: move;
+}
+
+.modal-dialog--big {
+    width: 1000px;
+    max-width: 1000px;
+}
+/* Стиль для таблиц в rich-text */
+
+.rich-text td {
+    padding: 15px 7px;
+}
+
+.rich-text tr:nth-child(even) {
+    background: #FAFAFA;
+}
+
+.rich-text table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px solid #aaa;
+}
+
+/**Глобальные стили прохождения теста*/
+.test-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.test-wrapper__left, .test-wrapper__right {
+    font-size: 20px;
+    flex: 0 0 40px;
+}
+
+.test-wrapper__right {
+    text-align: right;
+}
+
+.test-wrapper__main {
+    flex-grow: 1;
+}
+
+.test-paginate-footer {
+    display: flex;
+    align-items: center;
+}
+
+.test-paginate-footer__paginator {
+}
+
+.test-paginate-footer__current {
+    margin: 0 20px;
+}
+.test-paginate-footer__total {
+}
+
+.test-paginate-footer-item {
+    
+}
+
+.test-paginate-footer-item__value {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.leader-line {
+    z-index: 1050;
+}

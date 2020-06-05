@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...</title>
+    <base href="/">
+    <link rel="stylesheet" href="/nprogress/nprogress.css" />
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="/font-awesome/css/v4-shims.min.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap-slider/bootstrap-slider.min.css" />
+    <link rel="stylesheet" href="/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/cropper/cropper.min.css" />
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="/app/styles.css" />
+    <link href="//vjs.zencdn.net/6.2.7/video-js.css" rel="stylesheet">
+</head>
+<body>
+    <input id="storageDownloadUrl" type="hidden" value="https://storagedownloader.w2016.epd.ru/" />
+    <input id="storageUploadUrl" type="hidden" value="https://storageuploader.w2016.epd.ru/" />
+    <app>
+        <div style="margin-top: 20px; font-weight: bold; text-align: center">
+            <p><img src="/app/default.gif" alt="Загрузка" /></p>
+            <p>Идёт загрузка приложения</p>
+        </div>
+    </app>
+    <div id="globalOverlay"></div>
+    <div id="globalProgressBar" style="display:none">
+        <div>
+            <div>
+                <div class="text"></div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <div style="text-align:right">
+                    <button type="button" class="btn btn-default">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="globalAlert" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Информация</h4>
+                </div>
+                <div class="modal-body" id="globalAlertBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="globalAlertOk" class="btn btn-success">ОК</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="globalConfirmation" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Предупреждение</h4>
+                </div>
+                <div class="modal-body" id="globalConfirmationBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="globalConfirmationOk" class="btn btn-success">Да</button>
+                    <button type="button" id="globalConfirmationCancel" data-dismiss="modal" class="btn btn-danger">Нет</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="globalConfirmationDelete" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Удаление</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="globalConfirmationDeleteBody"></div>
+                    <div id="globalConfirmationDeleteEnterPasswordBlock">
+                        <p>Для подтверждения удаления, пожалуйста, введите пароль</p>
+                        <input type="password" class="form-control" id="globalConfirmationDeleteEnterPasswordText" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="globalConfirmationDeleteOk" class="btn btn-danger">Да</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Нет</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="installPluginDialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content loading-overlay-container">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ABBYY Мониторинг клиент</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-justify">
+                        <p>Установите программу ABBYY Мониторинг клиент для работы сканера на портале. Для этого нажмите кнопку "Установить ABBYY Мониторинг клиент", запустите полученный файл и следуйте инструкциям мастера установки. Если программа уже установлена, пожалуйста, запустите её. </p>
+                        <p>Если выполнить сканирование не удалось, Вы можете выполнить сканирование любым удобным для Вас способом и загрузить готовые изображения бланков.</p>
+                    </div>
+                    <p>
+                        <a class="btn btn-success" href="/ABBYY Monitoring Client x86.msi">Установить ABBYY Мониторинг клиент</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Закрыть</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script src="/zonejs/zone.min.js"></script>
+    <script src="/reflect/Reflect.js"></script>
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/popper.js/umd/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/momentjs/moment-with-locales.min.js"></script>
+    <script src="/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/inputmask/jquery.inputmask.bundle.min.js"></script>
+    <script src="/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script src="/nprogress/nprogress.js"></script>
+    <script src="/cropper/cropper.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/tinymce/tinymce.min.js"></script>
+    <script src="/select2/js/select2.min.js"></script>
+    <script src="/sortablejs/Sortable.min.js"></script>
+    <script src="/knockout/knockout-latest.js"></script>
+    <script src="//vjs.zencdn.net/6.2.7/video.js"></script>
+    <script src="/app/bundle.js"></script>
+
+    <script>
+        window.HELP_IMPROVE_VIDEOJS = false;
+    </script>
+    
+    <script type="text/javascript">
+        $(document).on('hidden.bs.modal', function (event) {
+            if ($('.modal:visible').length) //check if any modal is open
+            {
+                $('body').addClass('modal-open');//add class to body
+            }
+        });
+    </script>
+
+</body>
+</html>

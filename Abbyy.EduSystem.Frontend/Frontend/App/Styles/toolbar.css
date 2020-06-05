@@ -1,0 +1,11 @@
+﻿.navbar-row {
+    margin: 0
+}
+.top-navbar {
+    margin-bottom: 0;
+}
+.nav-support {
+    height: 50px;
+    line-height: 50px;
+    padding-right: 15px;
+}

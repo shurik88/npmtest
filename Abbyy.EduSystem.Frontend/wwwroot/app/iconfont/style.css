@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./icomoon.eot?e1bodm');
+  src:  url('./icomoon.eot?e1bodm#iefix') format('embedded-opentype'),
+    url('./icomoon.ttf?e1bodm') format('truetype'),
+    url('./icomoon.woff?e1bodm') format('woff'),
+    url('./icomoon.svg?e1bodm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-noun_1212639_cc:before {
+  content: "\e91e";
+}
+.icon-svg_arrow_down:before {
+  content: "\e900";
+}
+.icon-svg_arrow_left:before {
+  content: "\e901";
+}
+.icon-svg_arrow_right:before {
+  content: "\e902";
+}
+.icon-svg_arrow_up:before {
+  content: "\e903";
+}
+.icon-svg_blanks:before {
+  content: "\e904";
+}
+.icon-svg_check_box:before {
+  content: "\e905";
+}
+.icon-svg_check_mark_filled:before {
+  content: "\e906";
+}
+.icon-svg_check_mark_stroke:before {
+  content: "\e907";
+}
+.icon-svg_check_minus_filled:before {
+  content: "\e908";
+}
+.icon-svg_check_minus_stroke:before {
+  content: "\e909";
+}
+.icon-svg_child:before {
+  content: "\e90a";
+}
+.icon-svg_download:before {
+  content: "\e90b";
+}
+.icon-svg_error:before {
+  content: "\e90c";
+}
+.icon-svg_exit:before {
+  content: "\e90d";
+}
+.icon-svg_expertise:before {
+  content: "\e90e";
+}
+.icon-svg_filter:before {
+  content: "\e90f";
+}
+.icon-svg_minus:before {
+  content: "\e910";
+}
+.icon-svg_pencil:before {
+  content: "\e911";
+}
+.icon-svg_print:before {
+  content: "\e912";
+}
+.icon-svg_radio_button:before {
+  content: "\e913";
+}
+.icon-svg_radio_button_select:before {
+  content: "\e914";
+}
+.icon-svg_restart:before {
+  content: "\e915";
+}
+.icon-svg_save:before {
+  content: "\e916";
+}
+.icon-svg_scan:before {
+  content: "\e917";
+}
+.icon-svg_search:before {
+  content: "\e918";
+}
+.icon-svg_stars:before {
+  content: "\e919";
+}
+.icon-svg_test:before {
+  content: "\e91a";
+}
+.icon-svg_upload:before {
+  content: "\e91d";
+}

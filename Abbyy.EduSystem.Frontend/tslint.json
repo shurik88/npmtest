@@ -1,0 +1,6 @@
+﻿{
+  "extends": "tslint:recommended",
+  "rules": {
+    "quotemark": [ true, "single" ]
+  }
+}

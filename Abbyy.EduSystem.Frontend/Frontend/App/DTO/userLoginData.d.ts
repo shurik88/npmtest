@@ -1,0 +1,3 @@
+﻿interface IUserLoginData {
+    login: string;
+}

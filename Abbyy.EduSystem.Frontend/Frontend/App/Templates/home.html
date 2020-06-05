@@ -1,0 +1,11 @@
+﻿<div class="container admin-container">
+    <div *ngIf="!isLoading">
+        <h1>Greeting</h1>
+
+        <p>This is a simple example of an Angular component.</p>
+        <p>Greeting: <strong>{{ greeting }}</strong></p>
+        <button (click)="setGreeting()">Greeting</button>
+        <button (click)="alertGreeting()">AlertGreeting</button>
+    </div>
+    <div class="loading-overlay" *ngIf="isLoading"></div>   
+</div>

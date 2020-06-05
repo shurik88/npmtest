@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>NodeJs</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptEnabled>False</TypeScriptEnabled>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
+    <UserSecretsId>6b90d67f-3e8c-450c-abde-abb068fdcad7</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\app\bundle.js" />
+    <Content Remove="wwwroot\app\bundle.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Frontend\App\DTO\userLoginData.d.ts" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <Folder Include="wwwroot\leader-line\" />
+    <Folder Include="wwwroot\plain-draggable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Algorithms.Greedy" Version="1.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\font-awesome\js\all.js" />
+    <None Include="wwwroot\font-awesome\js\all.min.js" />
+    <None Include="wwwroot\font-awesome\js\brands.js" />
+    <None Include="wwwroot\font-awesome\js\brands.min.js" />
+    <None Include="wwwroot\font-awesome\js\conflict-detection.js" />
+    <None Include="wwwroot\font-awesome\js\conflict-detection.min.js" />
+    <None Include="wwwroot\font-awesome\js\fontawesome.js" />
+    <None Include="wwwroot\font-awesome\js\fontawesome.min.js" />
+    <None Include="wwwroot\font-awesome\js\regular.js" />
+    <None Include="wwwroot\font-awesome\js\regular.min.js" />
+    <None Include="wwwroot\font-awesome\js\solid.js" />
+    <None Include="wwwroot\font-awesome\js\solid.min.js" />
+    <None Include="wwwroot\font-awesome\js\v4-shims.js" />
+    <None Include="wwwroot\font-awesome\js\v4-shims.min.js" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\font-awesome\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Frontend\App\DTO\userLoginData.d.ts" />
+  </ItemGroup>
+</Project>
