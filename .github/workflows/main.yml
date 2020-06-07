@@ -48,6 +48,8 @@ jobs:
         rsync -a ${DOTNET_ROOT/3.1.200/2.1.806}/* $DOTNET_ROOT/
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Npm Version
+      run: npm --version
     - name: Npm Install
       run: npm install
       working-directory: ${{ github.workspace }}/Abbyy.EduSystem.Frontend
