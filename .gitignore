@@ -13,3 +13,5 @@ node_modules
 #wwwroot/
 launchSettings.json
 /Epd.Fronend/.npmrc
+*.DotSettings.user
+*.csproj.user
