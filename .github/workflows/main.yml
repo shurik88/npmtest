@@ -48,8 +48,12 @@ jobs:
         rsync -a ${DOTNET_ROOT/3.1.200/2.1.806}/* $DOTNET_ROOT/
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Npm Version
-      run: npm --version
+    - name: Create .nmprc
+      run: cat > ${{ github.workspace }}/Abbyy.EduSystem.Frontend/.npmrc
+    - name: Add auth .nmprc
+      run: echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ${{ github.workspace }}/Abbyy.EduSystem.Frontend/.npmrc
+    - name: Add registery .nmprc
+      run: echo "registry=https://npm.pkg.github.com/shurik88" >> ${{ github.workspace }}/Abbyy.EduSystem.Frontend/.npmrc
     - name: Npm Install
       run: npm install
       working-directory: ${{ github.workspace }}/Abbyy.EduSystem.Frontend
