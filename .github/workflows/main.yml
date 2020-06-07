@@ -57,4 +57,11 @@ jobs:
     - name: Npm Install
       run: npm install
       working-directory: ${{ github.workspace }}/Abbyy.EduSystem.Frontend
+    - name: Dotnet Publish
+      run: dotnet publish -c Release --no-build -o ${{ github.workspace }}/publish
+    - name: Publish publish result to artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: publish
+        path: ${{ github.workspace }}/publish
 
