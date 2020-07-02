@@ -59,6 +59,12 @@ jobs:
       working-directory: ${{ github.workspace }}/Abbyy.EduSystem.Frontend
     - name: Dotnet Publish
       run: dotnet publish -c Release --no-build -o ${{ github.workspace }}/publish
+    - name: Edit Logs ConnectionString
+      uses: deef0000dragon1/json-edit-action/@v1
+      env:
+        KEY: DatabaseConnections[1].ConnectionString
+        VALUE: newConnectionString
+        FILE: ${{ github.workspace }}/publish/appsettings.json
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
       with:
