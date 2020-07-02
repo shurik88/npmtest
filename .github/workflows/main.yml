@@ -64,7 +64,7 @@ jobs:
       with:
         files: '${{ github.workspace }}/publish/appsettings.json'
       env:
-        DatabaseConnections.1.Name: LogsEditted
+        DatabaseConnections.1.ConnectionString: ${{secrets.LOGSCONNECTIONSTRING}}
         SendGrid.ApiKey: bla-bla
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
