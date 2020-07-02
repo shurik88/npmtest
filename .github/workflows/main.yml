@@ -72,10 +72,9 @@ jobs:
         DatabaseConnections.1.ConnectionString: ${{secrets.LOGSCONNECTIONSTRING}}
         SendGrid.ApiKey: bla-bla
     - name: Zip Publish
-      uses: papeloto/action-zip@v1
+      uses: montudor/action-zip@v0.1.0
       with:
-        files: ${{ github.workspace }}/publish
-        dest: ${{ github.workspace }}/publish.zip
+        args: zip -q -b ${{ github.workspace }} -r ./publish.zip ./publish
     - name: Copy folder content recursively to remote github_test
       uses: garygrossgarten/github-action-scp@release
       with:
