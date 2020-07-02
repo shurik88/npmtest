@@ -71,7 +71,7 @@ jobs:
       env:
         DatabaseConnections.1.ConnectionString: ${{secrets.LOGSCONNECTIONSTRING}}
         SendGrid.ApiKey: bla-bla
-    - name: Copy folder content recursively to remote
+    - name: Copy folder content recursively to remote github_test
       uses: garygrossgarten/github-action-scp@release
       with:
         local: ${{ github.workspace }}/publish
