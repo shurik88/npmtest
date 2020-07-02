@@ -59,12 +59,13 @@ jobs:
       working-directory: ${{ github.workspace }}/Abbyy.EduSystem.Frontend
     - name: Dotnet Publish
       run: dotnet publish -c Release --no-build -o ${{ github.workspace }}/publish
-    - name: Edit Logs ConnectionString
-      uses: deef0000dragon1/json-edit-action/@v1
+    - name: App Settings Variable Substitution
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: '${{ github.workspace }}/publish/appsettings.json'
       env:
-        KEY: DatabaseConnections[1].ConnectionString
-        VALUE: newConnectionString
-        FILE: ${{ github.workspace }}/publish/appsettings.json
+        DatabaseConnections.1.Name: LogsEditted
+        SendGrid.ApiKey: bla-bla
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
       with:
