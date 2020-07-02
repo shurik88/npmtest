@@ -86,8 +86,8 @@ jobs:
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: publish
-        path: ${{ github.workspace }}/publish
+        name: publishzip
+        path: ${{ github.workspace }}/publish.zip
     - name: Slack Notification build start
       uses: rtCamp/action-slack-notify@v2.0.2
       env:
