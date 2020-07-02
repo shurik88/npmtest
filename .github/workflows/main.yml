@@ -74,7 +74,7 @@ jobs:
     - name: Zip Publish
       uses: montudor/action-zip@v0.1.0
       with:
-        args: zip -q -b ${{ github.workspace }} -r ./publish.zip ./publish
+        args: zip -q -r ./publish.zip ./publish
     - name: Copy folder content recursively to remote github_test
       uses: garygrossgarten/github-action-scp@release
       with:
