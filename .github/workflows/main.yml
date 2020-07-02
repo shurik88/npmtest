@@ -91,7 +91,7 @@ jobs:
         key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
         script: |
           cd /home/${{ secrets.DEPLOY_USER }}/edusystem
-          unzip --q -l publish.zip
+          unzip --q publish.zip
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
       with:
