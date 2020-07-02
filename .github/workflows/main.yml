@@ -71,10 +71,14 @@ jobs:
       env:
         DatabaseConnections.1.ConnectionString: ${{secrets.LOGSCONNECTIONSTRING}}
         SendGrid.ApiKey: bla-bla
+    - name: Zip Publish
+    - uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -qq -r ${{ github.workspace }}/publish.zip ${{ github.workspace }}/publish
     - name: Copy folder content recursively to remote github_test
       uses: garygrossgarten/github-action-scp@release
       with:
-        local: ${{ github.workspace }}/publish
+        local: ${{ github.workspace }}/publish.zip
         remote: /home/AzureUser/edusystem
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USER }}
