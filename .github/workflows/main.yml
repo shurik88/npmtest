@@ -71,6 +71,14 @@ jobs:
       env:
         DatabaseConnections.1.ConnectionString: ${{secrets.LOGSCONNECTIONSTRING}}
         SendGrid.ApiKey: bla-bla
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
+      with:
+        local: ${{ github.workspace }}/publish
+        remote: /srv/edusystem
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USER }}
+        privateKey: ${{ secrets.DEPLOY_PRIVATE_KEY }}
     - name: Publish publish result to artifacts
       uses: actions/upload-artifact@v2
       with:
