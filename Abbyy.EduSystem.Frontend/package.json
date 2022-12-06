@@ -30,7 +30,7 @@
     "datatables.net": "~1.10.19",
     "datatables.net-dt": "~1.10.19",
     "font-awesome": "~4.7.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "ie-shim": "^0.1.0",
     "inputmask": "^3.3.7",
     "interactjs": "1.6.3",
